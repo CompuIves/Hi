@@ -355,6 +355,3 @@ DEPENDENCIES
   vcr (~> 2.9.3)
   web-console (~> 2.0)
   webmock (~> 1.20.4)
-
-BUNDLED WITH
-   1.10.3
