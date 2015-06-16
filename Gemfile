@@ -33,12 +33,15 @@ gem 'haml', '~> 4.0.6'
 
 gem 'bootstrap-sass', '~> 3.3.4'
 
+# Timezone fix for Windows 
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
 group :development do
   # Added to improve gaurd responsiveness
-  gem 'rb-readline', '~> 0.5.2'  
+  gem 'rb-readline', '~> 0.5.2'
 end
 
 group :development, :test do
