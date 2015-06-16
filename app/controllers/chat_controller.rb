@@ -12,12 +12,16 @@ class ChatController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to action: 'index' }
-      format.js
+      format.js {render action: 'index'}
     end
     Rails.logger.debug { "Save message" }
   end
 
   def update
+    respond_to do |format|
+      format.html { redirect_to action: 'index' }
+      format.js {render action: 'index'}
+    end
   end
 
 
