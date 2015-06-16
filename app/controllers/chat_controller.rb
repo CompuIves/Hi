@@ -10,22 +10,20 @@ class ChatController < ApplicationController
 
     @message.save
 
-    update
-    Rails.logger.debug { "Save message" }
-  end
-
-  def update
     respond_to do |format|
       format.html { redirect_to action: 'index' }
       format.js
     end
+    Rails.logger.debug { "Save message" }
+  end
+
+  def update
   end
 
 
   private
 
   def get_messages
-    Rails.logger.debug { "LOAD" }
     @messages = Message.last(20)
     Rails.logger.debug {@messages.last.message}
   end
