@@ -1,2 +1,9 @@
 = form_tag({controller: 'chat', action: 'create'}, remote: true) do
   = text_field_tag :message, nil, class: 'sendbar'
+
+:javascript
+  $('.sendbar').keyup(function(e) {
+    if(e.keyCode == 13) {
+      $('.sendbar').val('');
+    }
+  });
