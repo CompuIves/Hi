@@ -1,2 +1,2 @@
-= form_tag controller: 'chats', action: 'create', method: 'post' do
-  = text_field :message, :title, class: 'sendbar'
+= form_tag controller: 'chat', action: 'create', method: 'post', remote: true do
+  = text_field_tag :message, nil, class: 'sendbar'
