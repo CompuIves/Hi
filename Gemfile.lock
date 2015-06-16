@@ -158,6 +158,8 @@ GEM
     notiffany (0.0.6)
       nenv (~> 0.1)
       shellany (~> 0.0)
+    pg (0.18.2)
+    pg (0.18.2-x64-mingw32)
     poltergeist (1.6.0)
       capybara (~> 2.1)
       cliver (~> 0.3.1)
@@ -347,6 +349,7 @@ DEPENDENCIES
   jasmine-jquery-rails (~> 1.4.2)
   jbuilder (~> 2.0)
   jquery-rails
+  pg
   poltergeist (~> 1.6.0)
   pry-rails (~> 0.3.3)
   rails (= 4.2.1)
