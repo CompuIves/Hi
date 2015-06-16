@@ -1,3 +1,26 @@
 // Place all the styles related to the Chat controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.messagescreen {
+  width: 100%;
+  height: 80vh;
+  background-color: #eeeeee;
+
+  border-radius: 1%;
+
+  margin-top: 100px;
+
+  box-shadow: inset 0px 0px 1px 1px rgb(200, 200, 200);
+}
+
+.sendbar {
+  width: 90%;
+  margin-left: calc((100% - 90%) / 2);
+  height: 4rem;
+  line-height: 4rem;
+  padding: 1rem;
+  margin-top: 20px;
+  border: none;
+  border-radius: 2px;
+  box-shadow: inset 0px 0px 1px 1px rgb(220, 220, 220);
+}
