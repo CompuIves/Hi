@@ -1,2 +1,5 @@
 .messagescreen
   = render partial: @messages
+
+:javascript
+  $('.messagescreen')[0].scrollTop = $('.messagescreen')[0].scrollHeight
