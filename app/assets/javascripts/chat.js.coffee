@@ -8,7 +8,7 @@ $ ->
   })
   scrollDown()
   p = pubnub.subscribe({
-    channel: 'messaging',
+    channel: window.location.href.split('/').pop(),
     message: (message) ->
       $('.messagescreen').append("<div class='message'><div class='text'>"+ message.message + "</div><div class='date'>" + message.created_at + "</div></div>")
       scrollDown()

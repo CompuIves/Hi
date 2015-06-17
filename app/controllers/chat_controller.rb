@@ -18,7 +18,7 @@ class ChatController < ApplicationController
       if @message.save
 
         pubnub.publish(
-          channel: 'messaging',
+          channel: @chat.name,
           message: @message,
         ) { |data|  Rails.logger.debug data.response }
       end
