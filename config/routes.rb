@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
   root 'chat#index'
 
-  resources :chat, only: [:index, :create]
+  resources :chat, param: :name, only: [:index, :show] do
+    member do
+      post 'create' => 'chat#create'
+    end
+
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,7 +1,8 @@
 class ChatController < ApplicationController
   require 'pubnub'
 
-  before_action :get_messages
+  before_action :get_all_messages, only: :index
+  before_action :set_chat, only: [:create]
   skip_before_filter :verify_authenticity_token
 
   def index
@@ -11,8 +12,11 @@ class ChatController < ApplicationController
   def create
     @message = Message.new(message: params[:message])
 
+    @chat.messages << (@message)
+
     respond_to do |format|
       if @message.save
+
         pubnub.publish(
           channel: 'messaging',
           message: @message,
@@ -24,13 +28,19 @@ class ChatController < ApplicationController
     Rails.logger.debug { "Save message" }
   end
 
-
+  def show
+    @chat = Chat.find_or_create_by(name: params[:name])
+    @messages = @chat.messages.last(20)
+  end
 
   private
 
-  def get_messages
+  def set_chat
+    @chat = Chat.find_by(name: params[:name])
+  end
+
+  def get_all_messages
     @messages = Message.last(20)
-    Rails.logger.debug {@messages.last.message}
   end
 
   def pubnub
