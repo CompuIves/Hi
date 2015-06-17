@@ -1,28 +1,26 @@
 class ChatController < ApplicationController
   before_action :get_messages
+  skip_before_filter :verify_authenticity_token
 
   def index
+    Rails.logger.debug "Received index message"
   end
 
   def create
     @message = Message.new(message: params[:message])
     @messages << @message
 
-    @message.save
-
     respond_to do |format|
-      format.html { redirect_to action: 'index' }
-      format.js {render action: 'index'}
+      if @message.save
+        WebsocketRails[:messages].trigger 'new', @message
+
+        format.js { render action: 'index' }
+        format.html { redirect_to action: 'index' }
+      end
     end
     Rails.logger.debug { "Save message" }
   end
 
-  def update
-    respond_to do |format|
-      format.html { redirect_to action: 'index' }
-      format.js {render action: 'index'}
-    end
-  end
 
 
   private

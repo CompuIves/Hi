@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   root 'chat#index'
 
   resources :chat, only: [:index, :create]
-  get 'update' => 'chat#update'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
