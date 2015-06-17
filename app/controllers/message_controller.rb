@@ -1,4 +1,4 @@
-class MessageController < WebSocketRails::BaseController
+class MessageController < WebsocketRails::BaseController
 
   def update
   end
