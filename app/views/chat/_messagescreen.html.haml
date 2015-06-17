@@ -1,5 +1,7 @@
 .messagescreen
-  %a.morebutton Load more...
+  = if @messages.length > 0
+    %a.morebutton Load more...
+    
   = render partial: @messages
 
 :javascript
