@@ -3,7 +3,7 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $ ->
   scrollDown()
-  dispatcher = new WebSocketRails('localhost:3000/websocket')
+  dispatcher = new WebSocketRails('hi-messaging.herokuapp.com:3000/websocket')
   channel = dispatcher.subscribe('messages')
   channel.bind 'new', (message) ->
     $('.messagescreen').append("<div class='message'><div class='text'>"+ message.message + "</div><div class='date'>" + message.created_at + "</div></div>")
