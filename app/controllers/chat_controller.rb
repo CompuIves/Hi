@@ -6,7 +6,7 @@ class ChatController < ApplicationController
   skip_before_filter :verify_authenticity_token
 
   def index
-    Rails.logger.debug "Received index message"
+
   end
 
   def create

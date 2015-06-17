@@ -1,3 +1,20 @@
-.title Hi
-= render partial: 'messagescreen'
-= render partial: 'inputbar'
+.base_form
+  .title Hi
+  .text Which chatroom do you want to join?
+  %input.inputbar.form-control
+  %button.btn.btn-primary Enter Room
+
+:javascript
+  $('.inputbar').keyup(function(e) {
+    if(e.keyCode == 13) {
+      redirect();
+    }
+  });
+
+  $('.btn').click(function() {
+    redirect();
+  })
+
+  redirect = function() {
+    window.location.href = window.location.href + 'chat/' + $('.inputbar').val();
+  }
