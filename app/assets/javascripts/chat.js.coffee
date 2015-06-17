@@ -11,5 +11,4 @@ $ ->
 
 
 scrollDown = ->
-  console.log("hai")
   $('.messagescreen')[0].scrollTop = $('.messagescreen')[0].scrollHeight
