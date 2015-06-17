@@ -10,7 +10,7 @@
   border-radius: 1%;
   box-shadow: inset 0px 0px 1px 1px rgb(200, 200, 200);
 
-  overflow-y: scroll;
+  overflow-y: auto;
 
   .morebutton {
     display: block;
@@ -44,7 +44,7 @@
     margin-right: auto;
     max-width: 300px;
 
-    overflow: scroll;
+    overflow: auto;
 
     .text {
       text-align: center;
