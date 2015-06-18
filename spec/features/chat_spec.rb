@@ -6,11 +6,10 @@ feature 'chat' do
     expect(page).to have_content('Chat Room')
 
     fill_in :message, with: 'My chat message!'
-    find('.sendbar').native.send_keys(:return)
+    page.execute_script('$("form").submit()')
     wait_for do
       page.evaluate_script('$(".messagescreen > .message").length') > 0
     end
     expect(page).to have_content('My chat message!')
-
   end
 end
