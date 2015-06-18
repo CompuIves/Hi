@@ -38,7 +38,7 @@ module FeatureHelpers
     end
     unless waited < wait_max
       message = "Timeout of #{wait_max} seconds exceeded"
-      message += " while waiting for redirect to #{to}"
+      message += " while waiting for redirect to #{to}" if to
       message += '!'
       fail message
     end

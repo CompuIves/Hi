@@ -37,47 +37,47 @@ Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 # If you are not using ActiveRecord, you can remove this line.
 ActiveRecord::Migration.maintain_test_schema!
 
-module Capybara
-  class Server
-    def responsive?
-      return false if @server_thread && @server_thread.join(0)
+# module Capybara
+#   class Server
+#     def responsive?
+#       return false if @server_thread && @server_thread.join(0)
+#
+#       http = Net::HTTP.new(host, @port)
+#       http.use_ssl = true
+#       http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+#       res = http.get('/__identify__')
+#
+#       if res.is_a?(Net::HTTPSuccess) or res.is_a?(Net::HTTPRedirection)
+#         return res.body == @app.object_id.to_s
+#       end
+#     rescue SystemCallError
+#       return false
+#     end
+#   end
+# end
 
-      http = Net::HTTP.new(host, @port)
-      http.use_ssl = true
-      http.verify_mode = OpenSSL::SSL::VERIFY_NONE
-      res = http.get('/__identify__')
+# def run_ssl_server(app, port)
+#   options = {
+#     Port: port,
+#     SSLEnable: true,
+#     SSLVerifyClient: OpenSSL::SSL::VERIFY_NONE,
+#     SSLPrivateKey: OpenSSL::PKey::RSA.new(File.read(Rails.root.join('config', 'nginx', 'certs', 'dev.catawiki.nl.key').to_s)),
+#     SSLCertificate: OpenSSL::X509::Certificate.new(File.read(Rails.root.join('config', 'nginx', 'certs', 'dev.catawiki.nl.crt').to_s)),
+#     SSLCertName: [["NL", WEBrick::Utils::getservername]],
+#     AccessLog: [],
+#     Logger: WEBrick::Log::new(Rails.root.join('log', 'test_ssl.log').to_s)
+#   }
+#
+#   Rack::Handler::WEBrick.run(app, options)
+# end
 
-      if res.is_a?(Net::HTTPSuccess) or res.is_a?(Net::HTTPRedirection)
-        return res.body == @app.object_id.to_s
-      end
-    rescue SystemCallError
-      return false
-    end
-  end
-end
+# Capybara.server do |app, port|
+#   run_ssl_server(app, port)
+# end
 
-def run_ssl_server(app, port)
-  options = {
-    Port: port,
-    SSLEnable: true,
-    SSLVerifyClient: OpenSSL::SSL::VERIFY_NONE,
-    SSLPrivateKey: OpenSSL::PKey::RSA.new(File.read(Rails.root.join('config', 'nginx', 'certs', 'dev.catawiki.nl.key').to_s)),
-    SSLCertificate: OpenSSL::X509::Certificate.new(File.read(Rails.root.join('config', 'nginx', 'certs', 'dev.catawiki.nl.crt').to_s)),
-    SSLCertName: [["NL", WEBrick::Utils::getservername]],
-    AccessLog: [],
-    Logger: WEBrick::Log::new(Rails.root.join('log', 'test_ssl.log').to_s)
-  }
-
-  Rack::Handler::WEBrick.run(app, options)
-end
-
-Capybara.server do |app, port|
-  run_ssl_server(app, port)
-end
-
-Capybara.server_port = 3001
-Capybara.app_host = "https://localhost:%d" % Capybara.server_port
-Rails.application.default_url_options[:host] = "localhost:%d" % Capybara.server_port
+# Capybara.server_port = 3001
+# Capybara.app_host = "https://localhost:%d" % Capybara.server_port
+# Rails.application.default_url_options[:host] = "localhost:%d" % Capybara.server_port
 
 Capybara.register_driver :poltergeist do |app|
   Capybara::Poltergeist::Driver.new(app, inspector: true,

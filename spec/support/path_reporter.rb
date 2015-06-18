@@ -25,10 +25,10 @@ module Capybara
       def output_screenshot_info(example)
         return unless (screenshot = example.metadata[:screenshot])
         output.puts
-        output.puts(long_padding + "HTML dump: file://#{screenshot[:html]}".yellow) if screenshot[:html]
-        output.puts(long_padding + "Screenshot: file://#{screenshot[:image]}".yellow) if screenshot[:image]
+        output.puts(long_padding + "HTML dump: file://#{screenshot[:html]}") if screenshot[:html]
+        output.puts(long_padding + "Screenshot: file://#{screenshot[:image]}") if screenshot[:image]
         if ENV['RAILS_SHOW_TEST_LOG'] || ENV['CIRCLECI']
-          log_excerpt = `cat log/test.log`.split("\n").map {|line| "#{long_padding}#{line}".cyan}.join("\n")
+          log_excerpt = `cat log/test.log`.split("\n").map {|line| "#{long_padding}#{line}"}.join("\n")
           if log_excerpt.present?
             output.puts(long_padding + "=================== Test Log Excerpt ===================")
             output.puts
