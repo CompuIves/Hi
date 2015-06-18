@@ -9267,3 +9267,90 @@ D, [2015-06-17T17:01:48.074853 #4175] DEBUG -- pubnub: Event#handle_response
 D, [2015-06-17T17:01:48.074960 #4175] DEBUG -- pubnub: Event#add_common_data_to_envelopes
 D, [2015-06-17T17:01:48.074981 #4175] DEBUG -- pubnub: Response: [1,"Sent","14345533080614385"]
 D, [2015-06-17T17:01:48.074994 #4175] DEBUG -- pubnub: Firing callbacks
+D, [2015-06-18T13:42:37.002051 #59968] DEBUG -- pubnub: Symbolizing options keys
+D, [2015-06-18T13:42:37.002160 #59968] DEBUG -- pubnub: Setting default values
+D, [2015-06-18T13:42:37.002202 #59968] DEBUG -- pubnub: 
+
+Created new Pubnub::Client instance
+D, [2015-06-18T13:42:37.002335 #59968] DEBUG -- pubnub: Event#initialize | Initialized Pubnub::Publish
+D, [2015-06-18T13:42:37.002553 #59968] DEBUG -- pubnub: Pubnub::Publish#uri http://pubsub.pubnub.com/publish/pub-c-d32a81dc-a239-47d8-962b-f2ff6009abc3/sub-c-99c84654-14df-11e5-87d4-02ee2ddab7fe/0/hello_world/0/%7B%22id%22%3A50%2C%22message%22%3A%22test%22%2C%22created_at%22%3A%222015-06-18T11%3A42%3A36.992Z%22%2C%22updated_at%22%3A%222015-06-18T11%3A42%3A36.992Z%22%2C%22chat_id%22%3A13%7D?pnsdk=PubNub-Ruby/3.7.1&uuid=3f5e1519-3571-46ca-a5f0-a23cc101998f
+I, [2015-06-18T13:42:37.002850 #59968]  INFO -- pubnub: Bytesize: 382
+D, [2015-06-18T13:42:37.002970 #59968] DEBUG -- pubnub: Pubnub::Publish#uri http://pubsub.pubnub.com/publish/pub-c-d32a81dc-a239-47d8-962b-f2ff6009abc3/sub-c-99c84654-14df-11e5-87d4-02ee2ddab7fe/0/hello_world/0/%7B%22id%22%3A50%2C%22message%22%3A%22test%22%2C%22created_at%22%3A%222015-06-18T11%3A42%3A36.992Z%22%2C%22updated_at%22%3A%222015-06-18T11%3A42%3A36.992Z%22%2C%22chat_id%22%3A13%7D?pnsdk=PubNub-Ruby/3.7.1&uuid=3f5e1519-3571-46ca-a5f0-a23cc101998f
+I, [2015-06-18T13:42:37.003165 #59968]  INFO -- pubnub: Length:   382
+D, [2015-06-18T13:42:37.003196 #59968] DEBUG -- pubnub: Created event Pubnub::Publish
+D, [2015-06-18T13:42:37.003211 #59968] DEBUG -- pubnub: Pubnub::SingleEvent#fire
+D, [2015-06-18T13:42:37.003224 #59968] DEBUG -- pubnub: Pubnub::SingleEvent#fire | Adding event to async_events
+D, [2015-06-18T13:42:37.003234 #59968] DEBUG -- pubnub: Pubnub::SingleEvent#fire | Starting railgun
+D, [2015-06-18T13:42:37.003245 #59968] DEBUG -- pubnub: Pubnub::Client#start_event_machine | starting EM in new thread
+D, [2015-06-18T13:42:37.003256 #59968] DEBUG -- pubnub: Pubnub::Client#start_event_machine | We aren't running on thin
+D, [2015-06-18T13:42:37.003463 #59968] DEBUG -- pubnub: Pubnub::Client#start_event_machine | EM started in new thread
+D, [2015-06-18T13:42:37.003490 #59968] DEBUG -- Pubnub: Pubnub::Client#start_railgun | Initializing railgun
+D, [2015-06-18T13:42:37.152780 #59968] DEBUG -- pubnub: Pubnub::SingleEvent#fire
+D, [2015-06-18T13:42:37.152840 #59968] DEBUG -- pubnub: Pubnub::SingleEvent#fire | Event already on list!
+D, [2015-06-18T13:42:37.152857 #59968] DEBUG -- pubnub: Pubnub::Event#fire
+D, [2015-06-18T13:42:37.152880 #59968] DEBUG -- pubnub: Event#fire
+D, [2015-06-18T13:42:37.152956 #59968] DEBUG -- pubnub: Event#start_event | sending request
+D, [2015-06-18T13:42:37.152975 #59968] DEBUG -- pubnub: Event#start_event | tt: 0; ctt 0
+D, [2015-06-18T13:42:37.153196 #59968] DEBUG -- pubnub: Pubnub::Publish#uri http://pubsub.pubnub.com/publish/pub-c-d32a81dc-a239-47d8-962b-f2ff6009abc3/sub-c-99c84654-14df-11e5-87d4-02ee2ddab7fe/0/hello_world/0/%7B%22id%22%3A50%2C%22message%22%3A%22test%22%2C%22created_at%22%3A%222015-06-18T11%3A42%3A36.992Z%22%2C%22updated_at%22%3A%222015-06-18T11%3A42%3A36.992Z%22%2C%22chat_id%22%3A13%7D?pnsdk=PubNub-Ruby/3.7.1&uuid=3f5e1519-3571-46ca-a5f0-a23cc101998f
+D, [2015-06-18T13:42:37.340990 #59968] DEBUG -- pubnub: Event#handle_response
+D, [2015-06-18T13:42:37.341095 #59968] DEBUG -- pubnub: Event#add_common_data_to_envelopes
+D, [2015-06-18T13:42:37.341120 #59968] DEBUG -- pubnub: Response: [1,"Sent","14346277573363736"]
+D, [2015-06-18T13:42:37.341136 #59968] DEBUG -- pubnub: Firing callbacks
+D, [2015-06-18T13:42:49.741822 #59968] DEBUG -- pubnub: Symbolizing options keys
+D, [2015-06-18T13:42:49.741919 #59968] DEBUG -- pubnub: Setting default values
+D, [2015-06-18T13:42:49.741952 #59968] DEBUG -- pubnub: 
+
+Created new Pubnub::Client instance
+D, [2015-06-18T13:42:49.742022 #59968] DEBUG -- pubnub: Event#initialize | Initialized Pubnub::Publish
+D, [2015-06-18T13:42:49.742193 #59968] DEBUG -- pubnub: Pubnub::Publish#uri http://pubsub.pubnub.com/publish/pub-c-d32a81dc-a239-47d8-962b-f2ff6009abc3/sub-c-99c84654-14df-11e5-87d4-02ee2ddab7fe/0/hello_world/0/%7B%22id%22%3A51%2C%22message%22%3A%22test%22%2C%22created_at%22%3A%222015-06-18T11%3A42%3A49.732Z%22%2C%22updated_at%22%3A%222015-06-18T11%3A42%3A49.732Z%22%2C%22chat_id%22%3A13%7D?pnsdk=PubNub-Ruby/3.7.1&uuid=e859974e-ff07-4298-a9d4-d2b2206c3ab3
+I, [2015-06-18T13:42:49.742465 #59968]  INFO -- pubnub: Bytesize: 382
+D, [2015-06-18T13:42:49.742585 #59968] DEBUG -- pubnub: Pubnub::Publish#uri http://pubsub.pubnub.com/publish/pub-c-d32a81dc-a239-47d8-962b-f2ff6009abc3/sub-c-99c84654-14df-11e5-87d4-02ee2ddab7fe/0/hello_world/0/%7B%22id%22%3A51%2C%22message%22%3A%22test%22%2C%22created_at%22%3A%222015-06-18T11%3A42%3A49.732Z%22%2C%22updated_at%22%3A%222015-06-18T11%3A42%3A49.732Z%22%2C%22chat_id%22%3A13%7D?pnsdk=PubNub-Ruby/3.7.1&uuid=e859974e-ff07-4298-a9d4-d2b2206c3ab3
+I, [2015-06-18T13:42:49.742733 #59968]  INFO -- pubnub: Length:   382
+D, [2015-06-18T13:42:49.742753 #59968] DEBUG -- pubnub: Created event Pubnub::Publish
+D, [2015-06-18T13:42:49.742764 #59968] DEBUG -- pubnub: Pubnub::SingleEvent#fire
+D, [2015-06-18T13:42:49.742774 #59968] DEBUG -- pubnub: Pubnub::SingleEvent#fire | Adding event to async_events
+D, [2015-06-18T13:42:49.742783 #59968] DEBUG -- pubnub: Pubnub::SingleEvent#fire | Starting railgun
+D, [2015-06-18T13:42:49.742793 #59968] DEBUG -- pubnub: Pubnub::Client#start_event_machine | starting EM in new thread
+D, [2015-06-18T13:42:49.742803 #59968] DEBUG -- pubnub: Pubnub::Client#start_event_machine | We aren't running on thin
+D, [2015-06-18T13:42:49.742814 #59968] DEBUG -- pubnub: Pubnub::Client#start_event_machine | EM already running
+D, [2015-06-18T13:42:49.742824 #59968] DEBUG -- Pubnub: Pubnub::Client#start_railgun | Initializing railgun
+D, [2015-06-18T13:42:49.764905 #59968] DEBUG -- pubnub: Pubnub::SingleEvent#fire
+D, [2015-06-18T13:42:49.764944 #59968] DEBUG -- pubnub: Pubnub::SingleEvent#fire | Event already on list!
+D, [2015-06-18T13:42:49.764960 #59968] DEBUG -- pubnub: Pubnub::Event#fire
+D, [2015-06-18T13:42:49.764971 #59968] DEBUG -- pubnub: Event#fire
+D, [2015-06-18T13:42:49.765017 #59968] DEBUG -- pubnub: Event#start_event | sending request
+D, [2015-06-18T13:42:49.765035 #59968] DEBUG -- pubnub: Event#start_event | tt: 0; ctt 0
+D, [2015-06-18T13:42:49.766020 #59968] DEBUG -- pubnub: Pubnub::Publish#uri http://pubsub.pubnub.com/publish/pub-c-d32a81dc-a239-47d8-962b-f2ff6009abc3/sub-c-99c84654-14df-11e5-87d4-02ee2ddab7fe/0/hello_world/0/%7B%22id%22%3A51%2C%22message%22%3A%22test%22%2C%22created_at%22%3A%222015-06-18T11%3A42%3A49.732Z%22%2C%22updated_at%22%3A%222015-06-18T11%3A42%3A49.732Z%22%2C%22chat_id%22%3A13%7D?pnsdk=PubNub-Ruby/3.7.1&uuid=e859974e-ff07-4298-a9d4-d2b2206c3ab3
+D, [2015-06-18T13:42:49.917369 #59968] DEBUG -- pubnub: Event#handle_response
+D, [2015-06-18T13:42:49.917470 #59968] DEBUG -- pubnub: Event#add_common_data_to_envelopes
+D, [2015-06-18T13:42:49.917491 #59968] DEBUG -- pubnub: Response: [1,"Sent","14346277699132524"]
+D, [2015-06-18T13:42:49.917505 #59968] DEBUG -- pubnub: Firing callbacks
+D, [2015-06-18T13:42:52.804851 #59968] DEBUG -- pubnub: Symbolizing options keys
+D, [2015-06-18T13:42:52.804936 #59968] DEBUG -- pubnub: Setting default values
+D, [2015-06-18T13:42:52.804969 #59968] DEBUG -- pubnub: 
+
+Created new Pubnub::Client instance
+D, [2015-06-18T13:42:52.805041 #59968] DEBUG -- pubnub: Event#initialize | Initialized Pubnub::Publish
+D, [2015-06-18T13:42:52.805204 #59968] DEBUG -- pubnub: Pubnub::Publish#uri http://pubsub.pubnub.com/publish/pub-c-d32a81dc-a239-47d8-962b-f2ff6009abc3/sub-c-99c84654-14df-11e5-87d4-02ee2ddab7fe/0/hello_world/0/%7B%22id%22%3A52%2C%22message%22%3A%22bla%22%2C%22created_at%22%3A%222015-06-18T11%3A42%3A52.801Z%22%2C%22updated_at%22%3A%222015-06-18T11%3A42%3A52.801Z%22%2C%22chat_id%22%3A13%7D?pnsdk=PubNub-Ruby/3.7.1&uuid=36e0160a-ccc1-49a4-9e01-2f60912d5de0
+I, [2015-06-18T13:42:52.805360 #59968]  INFO -- pubnub: Bytesize: 381
+D, [2015-06-18T13:42:52.805464 #59968] DEBUG -- pubnub: Pubnub::Publish#uri http://pubsub.pubnub.com/publish/pub-c-d32a81dc-a239-47d8-962b-f2ff6009abc3/sub-c-99c84654-14df-11e5-87d4-02ee2ddab7fe/0/hello_world/0/%7B%22id%22%3A52%2C%22message%22%3A%22bla%22%2C%22created_at%22%3A%222015-06-18T11%3A42%3A52.801Z%22%2C%22updated_at%22%3A%222015-06-18T11%3A42%3A52.801Z%22%2C%22chat_id%22%3A13%7D?pnsdk=PubNub-Ruby/3.7.1&uuid=36e0160a-ccc1-49a4-9e01-2f60912d5de0
+I, [2015-06-18T13:42:52.805590 #59968]  INFO -- pubnub: Length:   381
+D, [2015-06-18T13:42:52.805607 #59968] DEBUG -- pubnub: Created event Pubnub::Publish
+D, [2015-06-18T13:42:52.805619 #59968] DEBUG -- pubnub: Pubnub::SingleEvent#fire
+D, [2015-06-18T13:42:52.805628 #59968] DEBUG -- pubnub: Pubnub::SingleEvent#fire | Adding event to async_events
+D, [2015-06-18T13:42:52.805637 #59968] DEBUG -- pubnub: Pubnub::SingleEvent#fire | Starting railgun
+D, [2015-06-18T13:42:52.805647 #59968] DEBUG -- pubnub: Pubnub::Client#start_event_machine | starting EM in new thread
+D, [2015-06-18T13:42:52.805666 #59968] DEBUG -- pubnub: Pubnub::Client#start_event_machine | We aren't running on thin
+D, [2015-06-18T13:42:52.805679 #59968] DEBUG -- pubnub: Pubnub::Client#start_event_machine | EM already running
+D, [2015-06-18T13:42:52.805689 #59968] DEBUG -- Pubnub: Pubnub::Client#start_railgun | Initializing railgun
+D, [2015-06-18T13:42:52.827738 #59968] DEBUG -- pubnub: Pubnub::SingleEvent#fire
+D, [2015-06-18T13:42:52.827778 #59968] DEBUG -- pubnub: Pubnub::SingleEvent#fire | Event already on list!
+D, [2015-06-18T13:42:52.827794 #59968] DEBUG -- pubnub: Pubnub::Event#fire
+D, [2015-06-18T13:42:52.827805 #59968] DEBUG -- pubnub: Event#fire
+D, [2015-06-18T13:42:52.827850 #59968] DEBUG -- pubnub: Event#start_event | sending request
+D, [2015-06-18T13:42:52.827866 #59968] DEBUG -- pubnub: Event#start_event | tt: 0; ctt 0
+D, [2015-06-18T13:42:52.828922 #59968] DEBUG -- pubnub: Pubnub::Publish#uri http://pubsub.pubnub.com/publish/pub-c-d32a81dc-a239-47d8-962b-f2ff6009abc3/sub-c-99c84654-14df-11e5-87d4-02ee2ddab7fe/0/hello_world/0/%7B%22id%22%3A52%2C%22message%22%3A%22bla%22%2C%22created_at%22%3A%222015-06-18T11%3A42%3A52.801Z%22%2C%22updated_at%22%3A%222015-06-18T11%3A42%3A52.801Z%22%2C%22chat_id%22%3A13%7D?pnsdk=PubNub-Ruby/3.7.1&uuid=36e0160a-ccc1-49a4-9e01-2f60912d5de0
+D, [2015-06-18T13:42:52.989712 #59968] DEBUG -- pubnub: Event#handle_response
+D, [2015-06-18T13:42:52.989810 #59968] DEBUG -- pubnub: Event#add_common_data_to_envelopes
+D, [2015-06-18T13:42:52.989830 #59968] DEBUG -- pubnub: Response: [1,"Sent","14346277729860427"]
+D, [2015-06-18T13:42:52.989843 #59968] DEBUG -- pubnub: Firing callbacks

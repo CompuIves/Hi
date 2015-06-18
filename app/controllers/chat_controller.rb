@@ -3,7 +3,6 @@ class ChatController < ApplicationController
 
   before_action :get_all_messages, only: :index
   before_action :set_chat, only: [:create]
-  skip_before_filter :verify_authenticity_token
 
   def index
 
